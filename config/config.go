@@ -1,6 +1,7 @@
 package config
 
 import (
+	"aws-iot-jobs-tui/where"
 	"fmt"
 
 	"github.com/spf13/viper"
@@ -11,7 +12,7 @@ func Setup() error {
 	// Setup name and type of config files
 	viper.SetConfigFile(".env")
 	viper.SetConfigType("env")
-	viper.AddConfigPath("../")
+	viper.AddConfigPath(where.Config())
 
 	// Load config from file
 	if err := viper.ReadInConfig(); err != nil {
