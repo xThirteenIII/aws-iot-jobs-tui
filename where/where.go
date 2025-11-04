@@ -39,6 +39,6 @@ func Logs() string {
 		log.Fatalf("couldn't get working directory")
 	}
 
-	path := filepath.Join(workingDir, "/logs")
+	path := filepath.Join(workingDir, "logs")
 	return mkdir(path)
 }
